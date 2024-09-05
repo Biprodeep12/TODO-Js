@@ -144,6 +144,12 @@ let se = document.getElementById('se');
 
 se.addEventListener('click', function () {
   runBeforeUnloadFunction();
+  let boar = document.getElementById('boar');
+  boar.textContent = 'Saved';
+  boar.classList.add('ano');
+  setTimeout(function () {
+    boar.classList.remove('ano');
+  }, 3000);
 });
 
 function runBeforeUnloadFunction() {
@@ -159,4 +165,10 @@ elet.addEventListener('click', function () {
   let lt = document.getElementById('list');
   lt.textContent = '';
   localStorage.clear();
+  let boar = document.getElementById('boar');
+  boar.textContent = 'Deleted All';
+  boar.classList.add('ano1');
+  setTimeout(function () {
+    boar.classList.remove('ano1');
+  }, 3000);
 });
